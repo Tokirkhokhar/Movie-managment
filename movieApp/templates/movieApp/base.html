@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie_Maintenance_Website</title>
+    <link rel="stylesheet" href="{% static 'movieApp/css/bootstrap.css' %}">
+</head>
+<body style="background: #121926;font-family: cursive;">
+    
+    <div class="container  p-4 " >
+        <h2 class="text-center alert" style="color:#FFFFFF;font-weight: 600;letter-spacing: 0.2rem;">Movie Maintenance Website </h2>
+        <div class="container  d-flex justify-content-center " >
+            <form class="d-flex m-3 "  style="width: 32rem;">>
+                <input class="form-control  me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success " type="submit">Search</button>
+            </form>
+
+        </div>
+        {% block content %} {% endblock content %}
+    </div>
+   
+    
+    <script src="{% static 'movieApp/js/bootstrap.js' %}"></script>
+    <script src="{% static 'movieApp/js/popper.js' %}"></script>
+    <script src="{% static 'movieApp/js/jquery.js' %}"></script>
+</body>
+</html>

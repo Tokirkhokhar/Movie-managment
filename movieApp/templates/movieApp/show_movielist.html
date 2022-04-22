@@ -1,0 +1,37 @@
+{% extends 'movieApp/base.html ' %}
+{% block content %}
+{%load static %}
+<div class="row d-flex ">
+    
+     <h4 class=" text-light border-bottom border-light p-2 " >Movie list</h4>
+     {% for i in movies %}
+     <div class="card m-2 " style="width: 18rem;background: #192133;box-shadow: 0 4px 5px rgb(0 0 0 / 20%);color:#A3A6AD;font-weight: bold">
+     
+          <img src="/movieApp/{{i.imgae}}"  class="card-img w-100 " alt="movie image " style="width: 100%">
+
+        <div class="card-body">
+          <div class="d-flex justify-content-between" style="font-weight: bold">
+            <h5 class="card-title" style="font-weight: bold">{{i.title}}</h5>
+            <p> {{i.vote}} </p>
+          </div>  
+
+          <div class="d-flex justify-content-between">
+            <p> {{i.rDate}} </p>
+            <p> {{i.noa}} </p>
+            {% comment %} <p> {{i.vote}} </p> {% endcomment %} 
+          </div>
+         <div>
+           <a href="upvote/{{i.Id}}">Vote</a>
+           <a href="downvote/{{i.Id}}">Down Vote</a>
+         </div>
+        </div>
+     </div>
+     {% endfor %}
+
+   
+ 
+    
+ 
+</div>
+{% endblock content %}
+  
